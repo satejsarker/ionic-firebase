@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams,ViewController } from 'ionic-angular';
+import { ResetPasswordPage} from '../reset-password/reset-password';
 
 /**
  * Generated class for the RegisterPage page.
@@ -15,6 +16,27 @@ import { IonicPage, NavController, NavParams,ViewController } from 'ionic-angula
 })
 export class RegisterPage {
 
+data:any=[{
+name:'satej',
+id:'1234',
+last:'sarker'
+
+},
+  {
+    name: 'samir',
+    id: 'assq114',
+    last: 'sarker'
+
+  }
+  ,
+  {
+    name: 'avijit',
+    id: 'awe121s11',
+    last: 'mondal'
+
+  }
+
+]
   constructor(public navCtrl: NavController, public navParams: NavParams,private viewCtrl:ViewController) {
   }
 
@@ -24,4 +46,10 @@ export class RegisterPage {
   onDismiss() {
     this.viewCtrl.dismiss();
   }
+  redirectTorest()
+{
+    this.navCtrl.push(ResetPasswordPage,this.data);
+}
+
+
 }
